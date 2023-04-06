@@ -69,7 +69,7 @@ public class XYZAutomation {
 
 
 
-
+        //1. DECLARE CUSTOMERS
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         newCustomers[0] = new CustomerInfo("Kyo","Kusanagi", "L789C349");
@@ -86,6 +86,7 @@ public class XYZAutomation {
         extentTest = extent.createTest("XYZ Bank Test Run");
 
         try{
+            //2. GO TO RESPECTIVE SITE
             driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login.");
             WebElement bankManagerBtn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@class='btn btn-primary btn-lg'])[2]")));
             bankManagerBtn.click();
