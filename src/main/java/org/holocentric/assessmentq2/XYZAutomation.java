@@ -141,7 +141,7 @@ public class XYZAutomation {
     }
 
     @AfterAll
-    public static void afterClassCore(TestInfo testInfo){
+    public static void afterAll(){
         if(driver !=null){
             driver.quit();
         }
